@@ -1,31 +1,47 @@
----
-title: 'This is my Site Title'
----
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Site Title {% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
-  <meta charset='UTF-8'/>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <link rel='alternate' type='application/rss+xml' title='RSS' href='SITEURLGOESHERE/blog.rss' />
-  <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
-  <link href='{{site.baseurl}}/site.css' rel='stylesheet' />
-</head>
-<body>
-  <div class='container'>
-    <div class='col12 clearfix'>
-      <div class='header col6 margin3 pad4h'>
-        <div class='clearfix col12'>
-          <div class='menu fr'>
-            <a class='{% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'>Blog</a>
-            <a class='{% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About</a>
-            <a href='//github.com/prose/starter'>Fork on GitHub</a>
-          </div>
-          <h1 class='title'><a href='{{site.baseurl}}/'>{{page.title}}</a></h1>
-        </div>
-      </div>
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
+    {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
+    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+    {% if page.author %}
+      {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
+    {% endif %}
+    {% include open-graph.html %}
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
+    <link href="{{ site.url }}/atom.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Atom Feed">
+    <link href="{{ site.url }}/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="{{ site.url }}/js/vendor/html5shiv.min.js"></script>
+      <script src="{{ site.url }}/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body id="js-body">
+    {% include browser-upgrade.html %}
+    {% include header.html %}
+    {% include navigation-sliding.html %}
+
+    <div id="page-wrapper">
+      {{ content }}
+      {% include footer.html %}
     </div>
-    {{content}}
-  </div>
-  <script src='{{site.baseurl}}/site.js'></script>
-</body>
+
+    <script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="{{ site.url }}/js/main.js"></script>
+
+  </body>
+
+</html>
