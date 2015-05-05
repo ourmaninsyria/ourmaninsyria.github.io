@@ -1,6 +1,17 @@
 # Site navigation links
 
-- title:
-  url:
-  excerpt:
-  image:
+
+- title: Updates
+  url: /updates/
+  excerpt: "Stories of determination."
+  image: 
+
+- title: Media 
+  url: /media/
+  excerpt: "Videos & podcasts"
+  image: 
+
+- title: About
+  url: /about/
+  excerpt: "All about Our Man in Syria"
+  image: 
