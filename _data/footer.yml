@@ -1,4 +1,13 @@
 # Footer navigation links
 
-- title:
-  url:
+- title: Home
+  url: /
+
+- title: About
+  url: /about/ 
+
+- title: Twitter
+  url: https://twitter.com/ourmaninsyria 
+
+- title: Instagram
+  url: https://instagram.com/ourmaninsyria/
