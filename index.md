@@ -8,23 +8,19 @@ image:
 <div class="tiles">
 
 <div class="tile">
-  <h2 class="post-title">Built for Jekyll 2</h2>
-  <p class="post-excerpt">Takes advantage of native Sass support and data files to make customizing your site easier.</p>
+  <h2 class="post-title">The team</h2>
+  <p class="post-excerpt">Flavius Mihaies, Consultant with the World Bank, Huffington Post contributor, formerly with the U.S. Congress, traveler and explorer. Sagorika Sen, Social Media Co-ordinator, works at the intersection of tech, business and marketing.</p>
 </div><!-- /.tile -->
 
 <div class="tile">
-  <h2 class="post-title">Content First</h2>
-  <p class="post-excerpt">Designed to put the focus on you and your writing. Headers, navigation, sidebars, and footers have been purposely deemphasized.</p>
+  <h2 class="post-title">Real time Analysis</h2>
+  <p class="post-excerpt">"Our Man in Syria" is an attempt at being critical observers of the changing nature of institutions / borders around the world.</p>
 </div><!-- /.tile -->
 
 <div class="tile">
-  <h2 class="post-title">Customizable</h2>
-  <p class="post-excerpt">Packed with layouts and modules. Include Disqus comments, social sharing buttons, and table of contents on one or all pages.</p>
+  <h2 class="post-title">Subscribe</h2>
+  <p class="post-excerpt">Sign up to our newsletter, and follow us on Social Media.</p>
 </div><!-- /.tile -->
 
-<div class="tile">
-  <h2 class="post-title">Extensible</h2>
-  <p class="post-excerpt">Compatible with popular libraries like <a href="http://bourbon.io">Bourbon</a>, <a href="http://neat.bourbon.io/">Neat</a>, and <a href="http://github.com/octopress/octopress">Octopress</a> to help build and deploy your site with ease.</p>
-</div><!-- /.tile -->
 
 </div><!-- /.tiles -->
