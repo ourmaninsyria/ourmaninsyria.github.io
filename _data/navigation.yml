@@ -6,10 +6,10 @@
   excerpt: "Stories of determination."
   image: 
 
-- title: Media 
-  url: /media/
-  excerpt: "Videos & podcasts"
-  image: 
+#- title: Media 
+  #url: /media/
+  #excerpt: "Videos & podcasts"
+  #image: 
 
 - title: About
   url: /about/
